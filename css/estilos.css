@@ -1,0 +1,241 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: serif;
+}
+
+/*Area Grid*/
+
+.grid-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 0.5fr auto 0.5fr;
+    grid-auto-columns: 1fr;
+    gap: 1px 0px;
+    grid-auto-flow: row;
+    grid-template-areas:
+        "header header"
+        "main main"
+        "footer footer";
+}
+
+.header {
+    grid-area: header;
+}
+
+.main {
+    grid-area: main;
+}
+
+.footer {
+    grid-area: footer;
+}
+
+
+/*------------HEADER------------*/
+.bg-blanco {
+    background-color: white;
+}
+
+div h1 {
+    text-decoration: none;
+    text-align: center;
+    font-size: 50px;
+    font-family: serif;
+    color: black;
+}
+
+
+
+/*---PRODUCTOS---*/
+
+h1 {
+    text-decoration: none;
+    text-align: center;
+    font-size: 50px;
+    font-family: serif;
+    color: black;
+}
+
+
+
+/*---NOVEDADES---*/
+.titulo h1 {
+    text-decoration: none;
+    text-align: center;
+    font-family: serif;
+    color: black;
+    font-size: 50px;
+}
+
+
+
+/*---CONTACTO---*/
+.titulo h1 {
+    text-decoration: none;
+    text-align: center;
+    font-family: serif;
+    color: black;
+    font-size: 50px;
+}
+
+.contacto form {
+    background-color: white;
+    justify-content: space-around;
+    text-align: center;
+}
+
+.contacto form {
+    margin: 10px;
+    padding: 17px;
+}
+
+.contacto form input {
+    width: 50%;
+    padding: 13px;
+}
+
+.contacto form textarea {
+    width: 100%;
+    padding: 13px;
+}
+
+
+/*---PREGUNTAS FRECUENTES---*/
+.titulo h1 {
+    text-decoration: none;
+    text-align: center;
+    font-family: serif;
+    color: black;
+    font-size: 50px;
+}
+
+.preguntasFrecuentes h2 {
+    text-decoration: none;
+    font-family: serif;
+    color: black;
+    font-size: 30px;
+}
+
+.preguntasFrecuentes p {
+    text-decoration: none;
+    font-family: serif;
+    color: black;
+    font-size: 20px;
+}
+
+
+/*----------FOOTER----------*/
+
+.footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: white;
+}
+
+
+
+
+/*----------RESPONSIVE----------*/
+/*---MEDIA QUERIES---*/
+
+/*Desktop*/
+@media(min-width:1020) {
+    .productos>div img {
+        width: 230px;
+        height: 200px;
+        padding: 20px;
+    }
+
+    p {
+        font-size: 25px;
+    }
+
+    .titulo h1 {
+        font-size: 60px;
+    }
+}
+
+/*Tablet*/
+
+@media(min-width:491px) and (max-width:1019px) {
+
+    .titulo h1 {
+        font-size: 30px;
+    }
+
+    .productos h2 {
+        font-size: 20px;
+    }
+
+    .productos h3 {
+        font-size: 20px;
+    }
+
+    .productos h4 {
+        font-size: 20px;
+    }
+
+    .preguntasFrecuentes h2 {
+        font-size: 20px;
+    }
+
+    .preguntasFrecuentes p {
+        font-size: 15px;
+    }
+
+    .footer nav ul li a {
+        font-size: 15px;
+    }
+
+    .footer div a img {
+        padding: 5px;
+        width: 35px;
+        height: 35px;
+    }
+}
+
+/*Smartphone*/
+@media(max-width:490px) {
+
+    .titulo h1 {
+        font-size: 20px;
+    }
+
+    .productos h2 {
+        font-size: 15px;
+    }
+
+    .productos h3 {
+        font-size: 15px;
+    }
+
+    .productos h4 {
+        font-size: 15px;
+    }
+
+    .preguntasFrecuentes h2 {
+        font-size: 15px;
+    }
+
+    .preguntasFrecuentes p {
+        font-size: 10px;
+    }
+
+    .footer nav ul li a {
+        font-size: 15px;
+    }
+
+    h3 {
+        font-size: 15px;
+    }
+
+    .footer div a img {
+        width: 30px;
+        height: 30px;
+        padding: 3px;
+    }
+
+}
