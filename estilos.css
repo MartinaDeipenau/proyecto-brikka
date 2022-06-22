@@ -2,7 +2,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family:Arial, Helvetica, sans-serif;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
 /*Area Grid*/
@@ -34,9 +34,14 @@
 
 
 /*------------HEADER------------*/
+.header {
+    grid-area: header;
+}
+
 .bg-blanco {
     background-color: white;
 }
+
 /*------------MAIN------------*/
 
 .hero {
@@ -52,15 +57,18 @@
     background-repeat: no-repeat;
     background-size: cover;
 }
+
 .hero h1 {
     font-size: 50px;
     font-weight: bold;
     text-align: center;
 }
+
 .main {
     background-color: white;
     grid-area: main;
 }
+
 .productos h2 {
     text-align: center;
     font-size: 40px;
@@ -69,6 +77,7 @@
     width: 100%;
     padding: 20px;
 }
+
 h1 {
     text-decoration: none;
     text-align: center;
@@ -76,15 +85,15 @@ h1 {
     color: black;
     font-size: 50px;
 }
+
 .productos a {
-    text-decoration: none;
-    color: black;
-    background-color: white;
-    font-size: 20px;
-    padding: 5px;
-    margin-top: 5px;
     border-radius: 5px;
+    text-decoration: none;
+    background-color: white;
+    padding: 5px;
+    color: black;
 }
+
 .productos a:hover {
     background-color: #ffe8d6;
 
@@ -94,32 +103,35 @@ h1 {
 /*---PRODUCTOS---*/
 
 
-.productos> div {
+.productos>div {
     display: flex;
     justify-content: space-around;
     align-items: center;
     margin-left: 10px;
     flex-wrap: wrap;
 }
-.productos> div article img {
+
+.productos>div article img {
     width: 300px;
     height: 300px;
     padding: 1px;
 }
-.productos> div article {
-   width: 300px;
-   height: 350px;
-   border: 1px;
-   box-shadow: 10px 10px 30px -6px rgba(0, 0, 0, 0.315);
-   background-color: white;
-   display: flex;
-   flex-direction: column;
-   justify-content: space-between;
-   text-align: center;
-   border-radius: 5px;
+
+.productos>div article {
+    width: 300px;
+    height: 350px;
+    border: 1px;
+    box-shadow: 10px 10px 30px -6px rgba(0, 0, 0, 0.315);
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    text-align: center;
+    border-radius: 5px;
 }
 
-.productos div article h3,p {
+.productos div article h3,
+p {
     color: black;
     font-size: 15px;
     text-transform: uppercase;
@@ -130,6 +142,7 @@ h2 {
     text-align: center;
     color: black;
 }
+
 .novedades>div {
     display: flex;
     justify-content: space-around;
@@ -137,28 +150,32 @@ h2 {
     margin-left: 10px;
     flex-wrap: wrap;
 }
+
 .novedades>div article img {
     width: 300px;
     height: 300px;
     padding: 1px;
 }
+
 .novedades>div article {
     width: 300px;
-   height: 330px;
-   border: 1px;
-   box-shadow: 10px 10px 30px -6px rgba(0, 0, 0, 0.315);
-   background-color: white;
-   display: flex;
-   flex-direction: column;
-   justify-content: space-between;
-   text-align: center;
+    height: 330px;
+    border: 1px;
+    box-shadow: 10px 10px 30px -6px rgba(0, 0, 0, 0.315);
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    text-align: center;
 
 }
+
 .novedades a:hover {
     background-color: #ffe8d6;
 
 }
-.novedades div article h3{
+
+.novedades div article h3 {
     color: black;
     font-size: 15px;
     text-transform: uppercase;
@@ -167,17 +184,19 @@ h2 {
 
 
 /*---CONTACTO---*/
-.contacto{
+.contacto {
     background-color: white;
     justify-content: space-around;
     text-align: center;
 }
+
 .contacto form input {
     width: 50%;
     padding: 10px;
     border-radius: 15px;
     box-shadow: 5px 5px 20px -6px;
 }
+
 .btn {
     background-color: #ffe8d6;
 }
@@ -202,14 +221,20 @@ h2 {
 
 /*----------FOOTER----------*/
 .footer {
+    grid-area: footer;
+}
+
+.footer {
     display: flex;
     justify-content: space-between;
     align-items: center;
     background-color: #ddbea9;
 }
+
 .footer nav ul {
     list-style: none;
 }
+
 .footer nav ul li a {
     color: black;
     text-decoration: underline;
@@ -217,12 +242,14 @@ h2 {
     margin: 10px;
     padding: 10px;
 }
+
 h4 {
     text-decoration: none;
     font-family: Arial, Helvetica, sans-serif;
     font-size: 15px;
     color: black;
 }
+
 .footer div a img {
     width: 50px;
     height: 50px;
@@ -235,12 +262,6 @@ h4 {
 
 /*Desktop*/
 @media(min-width:1020) {
-    .productos>div img {
-        width: 230px;
-        height: 200px;
-        padding: 20px;
-    }
-
     p {
         font-size: 25px;
     }
@@ -253,21 +274,12 @@ h4 {
 /*Tablet*/
 
 @media(min-width:491px) and (max-width:1019px) {
+    .hero h1 {
+        font-size: 45px;
+    }
 
-    .titulo h1 {
+    h1 {
         font-size: 30px;
-    }
-
-    .productos h2 {
-        font-size: 20px;
-    }
-
-    .productos h3 {
-        font-size: 20px;
-    }
-
-    .productos h4 {
-        font-size: 20px;
     }
 
     .preguntasFrecuentes h2 {
@@ -291,21 +303,33 @@ h4 {
 
 /*Smartphone*/
 @media(max-width:490px) {
+    .hero h1 {
+        font-size: 35px;
+    }
 
-    .titulo h1 {
+    h1 {
         font-size: 20px;
     }
 
     .productos h2 {
-        font-size: 15px;
+        text-align: center;
+        font-size: 25px;
+        padding: 15px;
     }
 
-    .productos h3 {
-        font-size: 15px;
+    .productos>div article img {
+        width: 200px;
+        height: 200px;
+        padding: 1px;
     }
 
-    .productos h4 {
-        font-size: 15px;
+    .productos>div article {
+        width: 200px;
+        height: 150px;
+    }
+
+    .productos div article h3 {
+        font-size: 10px;
     }
 
     .preguntasFrecuentes h2 {
@@ -320,7 +344,7 @@ h4 {
         font-size: 15px;
     }
 
-    h3 {
+    h4 {
         font-size: 15px;
     }
 

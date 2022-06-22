@@ -1,0 +1,142 @@
+/*-----RESPONSIVE-----*/
+/*Desktop*/
+@media(min-width:1020) {
+    p {
+        font-size: 25px;
+    }
+
+    .titulo h1 {
+        font-size: 60px;
+    }
+}
+
+/*Tablet*/
+@media(min-width:491px) and (max-width:1019px) {
+    .hero {
+        h1 {
+            font-size: 45px;
+        }
+    }
+
+    h1 {
+        font-size: 30px;
+    }
+
+    .preguntasFrecuentes {
+        h2 {
+            font-size: 20px;
+        }
+
+        p {
+            font-size: 15px;
+        }
+    }
+
+    .footer {
+        nav {
+            ul {
+                li {
+                    a {
+                        font-size: 15px;
+                    }
+                }
+            }
+        }
+    }
+
+    .footer {
+        div {
+            a {
+                img {
+                    padding: 5px;
+                    width: 35px;
+                    height: 35px;
+                }
+            }
+        }
+    }
+
+}
+/*Smartphone*/ 
+@media(max-width:490px) {
+    .hero {
+        h1 {
+            font-size: 35px;
+        }
+    }
+
+    h1 {
+        font-size: 20px;
+    }
+
+    .productos {
+        h2 {
+            text-align: center;
+            font-size: 25px;
+            padding: 15px;
+        }
+    }
+
+    .productos> {
+        div {
+            article {
+                width: 200px;
+                height: 150px;
+
+                img {
+                    width: 200px;
+                    height: 200px;
+                    padding: 1px;
+                }
+            }
+        }
+    }
+
+    .productos {
+        div {
+            article {
+                h3 {
+                    font-size: 10px;
+                }
+            }
+        }
+    }
+
+    .preguntasFrecuentes {
+        h2 {
+            font-size: 15px;
+        }
+
+        p {
+            font-size: 10px;
+        }
+    }
+
+    .footer {
+        nav {
+            ul {
+                li {
+                    a {
+                        font-size: 15px;
+                    }
+                }
+            }
+        }
+    }
+
+    h4 {
+        font-size: 15px;
+    }
+
+    .footer {
+        div {
+            a {
+                img {
+                    width: 30px;
+                    height: 30px;
+                    padding: 3px;
+                }
+            }
+        }
+    }
+}
