@@ -8,18 +8,32 @@
     .titulo h1 {
         font-size: 60px;
     }
+    
 }
 
 /*Tablet*/
-@media(min-width:491px) and (max-width:1019px) {
+@media(min-width:718px) and (max-width:1019px) {
     .hero {
         h1 {
             font-size: 45px;
         }
     }
+    .titulo {
+        h1{
+            font-size: 30px;
+        }
+    }
 
     h1 {
         font-size: 30px;
+    }
+    h2 {
+        font-size: 20px;
+    }
+    .productos {
+        h2 {
+            font-size: 20px;
+        }
     }
 
     .preguntasFrecuentes {
@@ -51,6 +65,7 @@
                     padding: 5px;
                     width: 35px;
                     height: 35px;
+                    flex-wrap: wrap;
                 }
             }
         }
@@ -73,32 +88,6 @@
         h2 {
             text-align: center;
             font-size: 25px;
-            padding: 15px;
-        }
-    }
-
-    .productos> {
-        div {
-            article {
-                width: 200px;
-                height: 150px;
-
-                img {
-                    width: 200px;
-                    height: 200px;
-                    padding: 1px;
-                }
-            }
-        }
-    }
-
-    .productos {
-        div {
-            article {
-                h3 {
-                    font-size: 10px;
-                }
-            }
         }
     }
 
