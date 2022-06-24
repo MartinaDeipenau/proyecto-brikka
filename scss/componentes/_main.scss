@@ -32,7 +32,7 @@ h1 {
     text-decoration: none;
     text-align: center;
     font-family: Arial, Helvetica, sans-serif;
-    color: black;
+    color: $color-letra;
     font-size: 50px;
 }
 
@@ -41,24 +41,21 @@ h1 {
         text-align: center;
         font-size: 40px;
         font-family: Arial, Helvetica, sans-serif;
-        color: black;
+        color: $color-letra;
         width: 100%;
         padding: 20px;
     }
 }
 
-.productos {
-    a {
-        border-radius: 5px;
-        text-decoration: none;
-        background-color: $color-fondoboton;
-        padding: 5px;
-        color: black;
-    }
-
-    :hover {
-        background-color: $color-boton;
-    }
+.productos a {
+    border-radius: 5px;
+    text-decoration: none;
+    background-color: $color-fondoboton;
+    padding: 5px;
+    color: $color-letra;
+}
+.productos a:hover {
+    background-color: $color-boton;
 }
 
 /*Productos*/
@@ -178,30 +175,24 @@ h2 {
     }
 }
 
-.contacto {
-    a {
-        border-radius: 5px;
-        text-decoration: none;
-        background-color: $color-fondoboton;
-        padding: 5px;
-        color: black;
-
-        :hover {
-            background-color: $color-boton;
-            ;
-
-        }
-    }
+.contacto a {
+    border-radius: 5px;
+    text-decoration: none;
+    background-color: $color-fondoboton;
+    padding: 5px;
+    color: $color-letra;
+}
+.contacto a:hover {
+    background-color: $color-boton;
 }
 
 .imagen {
-    color: black;
     display: flex;
     flex-direction: column;
     justify-content: space-around;
     align-items: center;
     width: 100%;
-    height: calc(60vh - 110px);
+    height: calc(80vh - 130px);
     background: linear-gradient(rgba(0, 0, 0, 0.493), rgba(0, 0, 0, 0.336)), url(../imagenes/cajam.jpg);
     background-position: center;
     background-repeat: no-repeat;
@@ -211,6 +202,7 @@ h2 {
         font-size: 30px;
         font-weight: bold;
         text-align: center;
+        color: $color-letrablanca;
 
     }
 }

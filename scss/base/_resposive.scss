@@ -12,7 +12,7 @@
 }
 
 /*Tablet*/
-@media(min-width:718px) and (max-width:1019px) {
+@media(min-width:491px) and (max-width:1019px) {
     .hero {
         h1 {
             font-size: 45px;
@@ -81,7 +81,7 @@
     }
 
     h1 {
-        font-size: 20px;
+        font-size: 30px;
     }
 
     .productos {
@@ -90,14 +90,15 @@
             font-size: 25px;
         }
     }
+  
 
     .preguntasFrecuentes {
         h2 {
-            font-size: 15px;
+            font-size: 20px;
         }
 
         p {
-            font-size: 10px;
+            font-size: 15px;
         }
     }
 
@@ -123,7 +124,7 @@
                 img {
                     width: 30px;
                     height: 30px;
-                    padding: 3px;
+                    padding: 1px;
                 }
             }
         }
