@@ -1,35 +1,40 @@
 @import "../base/variables";
 
-/*-----FOOTER-----*/ 
+/*-----FOOTER-----*/
 .footer {
     margin-top: 5px;
+    padding: 5px;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: $color-footer;
-    nav {
-        ul {
-            list-style: none;
-            li {
-                a {
-                    color: black;
-                    text-decoration: none;
-                    font-family: Arial, Helvetica, sans-serif;
-                    margin: 10px;
-                    padding: 10px;
-
+    background-color: #ddbea9;
+    grid-area: footer;
+    
+    div {
+        nav {
+            ul {
+                list-style: none;
+    
+                li {
+                    a {
+                        color: black;
+                        text-decoration: none;
+                        font-family: Arial, Helvetica, sans-serif;
+                        margin: 10px;
+                        padding: 10px;
+    
+                    }
                 }
             }
         }
     }
-}
-h4 {
-    text-decoration: none;
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 15px;
-    color: black;
-}
-.footer {
+    img {
+        width: 70px;
+        height: 70px;
+        border-radius: 10px;
+    }
+
+
     div {
         a {
             img {
@@ -37,6 +42,7 @@ h4 {
                 height: 50px;
                 padding: 10px;
             }
+
         }
     }
 }

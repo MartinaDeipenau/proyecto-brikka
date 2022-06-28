@@ -31,6 +31,7 @@
 .header {
   box-shadow: 5px 5px 20px -6px;
   margin-bottom: 20px;
+  grid-area: header;
 }
 
 .bg-blanco {
@@ -38,6 +39,24 @@
 }
 
 /*-----MAIN-----*/
+h1 {
+  text-decoration: none;
+  text-align: center;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: bold;
+  color: black;
+  font-size: 50px;
+}
+
+h2 {
+  text-align: center;
+  font-size: 40px;
+  font-family: Arial, Helvetica, sans-serif;
+  color: black;
+  width: 100%;
+  padding: 20px;
+}
+
 /*Index*/
 .main {
   background-color: white;
@@ -59,49 +78,28 @@
   margin-bottom: 5px;
 }
 .hero h1 {
-  font-size: 50px;
-  font-weight: bold;
-  text-align: center;
+  color: white;
 }
-
-h1 {
-  text-decoration: none;
-  text-align: center;
-  font-family: Arial, Helvetica, sans-serif;
-  color: black;
-  font-size: 50px;
-}
-
-.productos h2 {
-  text-align: center;
-  font-size: 40px;
-  font-family: Arial, Helvetica, sans-serif;
-  color: black;
-  width: 100%;
-  padding: 20px;
-}
-
-.productos a {
+.hero a {
   border-radius: 5px;
   text-decoration: none;
-  background-color: #ffede0;
+  background-color: #ddbea9;
   padding: 5px;
   color: black;
 }
-
-.productos a:hover {
-  background-color: #ddbea9;
+.hero a:hover {
+  background-color: #ffede0;
 }
 
 /*Productos*/
-.productos > div {
+.productos div {
   display: flex;
   justify-content: space-around;
   align-items: center;
   margin-left: 10px;
   flex-wrap: wrap;
 }
-.productos > div article {
+.productos div article {
   width: 300px;
   height: 350px;
   border: 1px;
@@ -114,12 +112,11 @@ h1 {
   border-radius: 5px;
   margin-top: 10px;
 }
-.productos > div article img {
+.productos div article img {
   width: 300px;
   height: 300px;
   padding: 1px;
 }
-
 .productos div article h3 {
   color: black;
   font-size: 15px;
@@ -129,6 +126,16 @@ h1 {
   color: black;
   font-size: 15px;
   text-transform: uppercase;
+}
+.productos div article a {
+  border-radius: 5px;
+  text-decoration: none;
+  background-color: #ffede0;
+  padding: 5px;
+  color: black;
+}
+.productos div article a:hover {
+  background-color: #ddbea9;
 }
 
 /*Novedades*/
@@ -161,8 +168,7 @@ h2 {
   height: 300px;
   padding: 1px;
 }
-
-.novedades div article h3 {
+.novedades > div article h3 {
   color: black;
   font-size: 15px;
   text-transform: uppercase;
@@ -174,33 +180,32 @@ h2 {
   justify-content: space-around;
   text-align: center;
 }
-.contacto form input {
+.contacto article form input {
   width: 50%;
   height: 50px;
   padding: 10px;
   border-radius: 15px;
   margin-top: 7px;
 }
-
-.contacto a {
+.contacto article form a {
   border-radius: 5px;
   text-decoration: none;
   background-color: #ffede0;
   padding: 5px;
   color: black;
 }
-
-.contacto a:hover {
+.contacto article form a:hover {
   background-color: #ddbea9;
 }
 
 .imagen {
+  color: black;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
   align-items: center;
   width: 100%;
-  height: calc(80vh - 130px);
+  height: calc(60vh - 110px);
   background: linear-gradient(rgba(0, 0, 0, 0.493), rgba(0, 0, 0, 0.336)), url(../imagenes/cajam.jpg);
   background-position: center;
   background-repeat: no-repeat;
@@ -230,29 +235,28 @@ h2 {
 /*-----FOOTER-----*/
 .footer {
   margin-top: 5px;
+  padding: 5px;
   display: flex;
   justify-content: space-between;
   align-items: center;
   background-color: #ddbea9;
+  grid-area: footer;
 }
-.footer nav ul {
+.footer div nav ul {
   list-style: none;
 }
-.footer nav ul li a {
+.footer div nav ul li a {
   color: black;
   text-decoration: none;
   font-family: Arial, Helvetica, sans-serif;
   margin: 10px;
   padding: 10px;
 }
-
-h4 {
-  text-decoration: none;
-  font-family: Arial, Helvetica, sans-serif;
-  font-size: 15px;
-  color: black;
+.footer img {
+  width: 70px;
+  height: 70px;
+  border-radius: 10px;
 }
-
 .footer div a img {
   width: 50px;
   height: 50px;
@@ -313,7 +317,7 @@ h4 {
     font-size: 20px;
   }
   .productos h2 {
-    font-size: 20px;
+    font-size: 30px;
   }
   .preguntasFrecuentes h2 {
     font-size: 20px;
@@ -321,8 +325,14 @@ h4 {
   .preguntasFrecuentes p {
     font-size: 15px;
   }
-  .footer nav ul li a {
+  .footer div nav ul li a {
     font-size: 15px;
+  }
+  .footer img {
+    padding: 5px;
+    width: 45px;
+    height: 45px;
+    flex-wrap: wrap;
   }
   .footer div a img {
     padding: 5px;
@@ -349,11 +359,13 @@ h4 {
   .preguntasFrecuentes p {
     font-size: 15px;
   }
-  .footer nav ul li a {
+  .footer div nav ul li a {
     font-size: 15px;
   }
-  h4 {
-    font-size: 15px;
+  .footer img {
+    width: 40px;
+    height: 40px;
+    padding: 1px;
   }
   .footer div a img {
     width: 30px;
