@@ -21,20 +21,24 @@ h2 {
 }
 
 /*Index*/
+@mixin imagen ($porcentaje, $calc) {
+    width: $porcentaje;
+    height: $calc;
+}
+
 .main {
     background-color: $color-main;
     grid-area: main;
 }
 
 .hero {
+    @include imagen(100%, calc(100vh - 150px));
     color: black;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    width: 100%;
-    height: calc(100vh - 150px);
-    background: linear-gradient(rgba(0, 0, 0, 0.493), rgba(0, 0, 0, 0.336)), url(../imagenes/disfruta.jpg);
+    background: linear-gradient(rgba(0, 0, 0, 0.493), rgba(0, 0, 0, 0.336)), url(../imagenes/disfruta-min.jpg);
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -44,21 +48,16 @@ h2 {
         color: $color-blanco;
     }
 
-    a {
-        border-radius: 5px;
-        text-decoration: none;
-        background-color: $color-boton;
-        padding: 5px;
-        color: black;
 
-        &:hover {
-            background-color: $color-fondoboton;
-}
-}
 }
 
 
 /*Productos*/
+@mixin sizes ($ancho, $alto) {
+    width: $ancho;
+    height: $alto;
+}
+
 .productos {
     div {
         display: flex;
@@ -68,8 +67,7 @@ h2 {
         flex-wrap: wrap;
 
         article {
-            width: 300px;
-            height: 350px;
+            @include sizes(300px, 350px);
             border: 1px;
             box-shadow: 10px 10px 30px -6px rgba(0, 0, 0, 0.315);
             background-color: $color-blanco;
@@ -98,26 +96,21 @@ h2 {
                 text-transform: uppercase;
             }
 
-            a {
-                border-radius: 5px;
-                text-decoration: none;
-                background-color: $color-fondoboton;
-                padding: 5px;
-                color: $color-letra;
-
-                &:hover {
-                    background-color: $color-boton;
-                }
-            }
         }
     }
 }
 
 /*Novedades*/
+@mixin sizes ($ancho, $alto) {
+    width: $ancho;
+    height: $alto;
+}
+
 h2 {
     text-align: center;
     color: $color-letra;
 }
+
 
 .novedades> {
     div {
@@ -128,8 +121,7 @@ h2 {
         flex-wrap: wrap;
 
         article {
-            width: 300px;
-            height: 330px;
+            @include sizes(300px, 350px);
             border: 1px;
             box-shadow: 10px 10px 30px -6px rgba(0, 0, 0, 0.315);
             background-color: rgb(255, 255, 255);
@@ -155,6 +147,11 @@ h2 {
 }
 
 /*Contacto*/
+@mixin imagen ($porcentaje, $calc) {
+    width: $porcentaje;
+    height: $calc;
+}
+
 .contacto {
     background-color: $color-blanco;
     justify-content: space-around;
@@ -169,32 +166,18 @@ h2 {
                 border-radius: 15px;
                 margin-top: 7px;
             }
-
-            a {
-                border-radius: 5px;
-                text-decoration: none;
-                background-color: $color-fondoboton;
-                padding: 5px;
-                color: $color-letra;
-
-                &:hover {
-                    background-color: $color-boton;
-
-                }
-            }
         }
     }
 }
 
 .imagen {
+    @include imagen(100%, $calc: calc(60vh - 110px));
     color: black;
     display: flex;
     flex-direction: column;
     justify-content: space-around;
     align-items: center;
-    width: 100%;
-    height: calc(60vh - 110px);
-    background: linear-gradient(rgba(0, 0, 0, 0.493), rgba(0, 0, 0, 0.336)), url(../imagenes/cajam.jpg);
+    background: linear-gradient(rgba(0, 0, 0, 0.493), rgba(0, 0, 0, 0.336)), url(../imagenes/cajam-min.jpg);
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -208,19 +191,52 @@ h2 {
     }
 }
 
-/*Preguntas Frecuentes*/
-.preguntasFrecuentes {
-    h2 {
-        text-decoration: none;
-        font-family: Arial, Helvetica, sans-serif;
-        color: $color-letra;
-        font-size: 30px;
-    }
+/*EXTENDS*/
+.boton {
+    border-radius: 5px;
+    text-decoration: none;
+    background-color: $color-boton;
+    padding: 5px;
+    color: $color-letra;
 
-    p {
-        text-decoration: none;
-        font-family: Arial, Helvetica, sans-serif;
+    &:hover {
         color: $color-letra;
-        font-size: 20px;
+        background-color: $color-fondoboton;
     }
 }
+
+.boton-hero {
+    @extend .boton;
+    background-color: $color-fondoboton;
+
+    &:hover {
+        background-color: $color-boton;
+    }
+}
+
+/*MIXINS*/
+@mixin sizes ($ancho, $alto) {
+    width: $ancho;
+    height: $alto;
+}
+
+@mixin imagen ($porcentaje, $calc) {
+    width: $porcentaje;
+    height: $calc;
+}
+
+/*EACH*/
+$color: (
+    estilo1: #bcd379,
+    estilo2: #c2242d,
+);
+ /*EACH con mapas*/
+ @each $nombre, $valor in $color {
+    .boton-#{$nombre}{
+        background-color: $valor;
+        @extend .boton;
+        text-decoration: underline;
+        border-radius: 7px;
+    }
+    
+ }

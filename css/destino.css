@@ -64,14 +64,14 @@ h2 {
 }
 
 .hero {
+  width: 100%;
+  height: calc(100vh - 150px);
   color: black;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  width: 100%;
-  height: calc(100vh - 150px);
-  background: linear-gradient(rgba(0, 0, 0, 0.493), rgba(0, 0, 0, 0.336)), url(../imagenes/disfruta.jpg);
+  background: linear-gradient(rgba(0, 0, 0, 0.493), rgba(0, 0, 0, 0.336)), url(../imagenes/disfruta-min.jpg);
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -79,16 +79,6 @@ h2 {
 }
 .hero h1 {
   color: white;
-}
-.hero a {
-  border-radius: 5px;
-  text-decoration: none;
-  background-color: #ddbea9;
-  padding: 5px;
-  color: black;
-}
-.hero a:hover {
-  background-color: #ffede0;
 }
 
 /*Productos*/
@@ -127,16 +117,6 @@ h2 {
   font-size: 15px;
   text-transform: uppercase;
 }
-.productos div article a {
-  border-radius: 5px;
-  text-decoration: none;
-  background-color: #ffede0;
-  padding: 5px;
-  color: black;
-}
-.productos div article a:hover {
-  background-color: #ddbea9;
-}
 
 /*Novedades*/
 h2 {
@@ -153,7 +133,7 @@ h2 {
 }
 .novedades > div article {
   width: 300px;
-  height: 330px;
+  height: 350px;
   border: 1px;
   box-shadow: 10px 10px 30px -6px rgba(0, 0, 0, 0.315);
   background-color: rgb(255, 255, 255);
@@ -187,26 +167,16 @@ h2 {
   border-radius: 15px;
   margin-top: 7px;
 }
-.contacto article form a {
-  border-radius: 5px;
-  text-decoration: none;
-  background-color: #ffede0;
-  padding: 5px;
-  color: black;
-}
-.contacto article form a:hover {
-  background-color: #ddbea9;
-}
 
 .imagen {
+  width: 100%;
+  height: calc(60vh - 110px);
   color: black;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
   align-items: center;
-  width: 100%;
-  height: calc(60vh - 110px);
-  background: linear-gradient(rgba(0, 0, 0, 0.493), rgba(0, 0, 0, 0.336)), url(../imagenes/cajam.jpg);
+  background: linear-gradient(rgba(0, 0, 0, 0.493), rgba(0, 0, 0, 0.336)), url(../imagenes/cajam-min.jpg);
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -218,18 +188,39 @@ h2 {
   color: white;
 }
 
-/*Preguntas Frecuentes*/
-.preguntasFrecuentes h2 {
+/*EXTENDS*/
+.boton, .boton-estilo2, .boton-estilo1, .boton-hero {
+  border-radius: 5px;
   text-decoration: none;
-  font-family: Arial, Helvetica, sans-serif;
+  background-color: #ddbea9;
+  padding: 5px;
   color: black;
-  font-size: 30px;
 }
-.preguntasFrecuentes p {
-  text-decoration: none;
-  font-family: Arial, Helvetica, sans-serif;
+.boton:hover, .boton-estilo2:hover, .boton-estilo1:hover, .boton-hero:hover {
   color: black;
-  font-size: 20px;
+  background-color: #ffede0;
+}
+
+.boton-hero {
+  background-color: #ffede0;
+}
+.boton-hero:hover {
+  background-color: #ddbea9;
+}
+
+/*MIXINS*/
+/*EACH*/
+/*EACH con mapas*/
+.boton-estilo1 {
+  background-color: #bcd379;
+  text-decoration: underline;
+  border-radius: 7px;
+}
+
+.boton-estilo2 {
+  background-color: #c2242d;
+  text-decoration: underline;
+  border-radius: 7px;
 }
 
 /*-----FOOTER-----*/
