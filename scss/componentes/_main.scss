@@ -10,7 +10,6 @@ h1 {
     font-size: 50px;
 }
 
-
 h2 {
     text-align: center;
     font-size: 40px;
@@ -33,7 +32,7 @@ h2 {
 
 .hero {
     @include imagen(100%, calc(100vh - 150px));
-    color: black;
+    color: $color-negro;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -50,7 +49,6 @@ h2 {
 
 
 }
-
 
 /*Productos*/
 @mixin sizes ($ancho, $alto) {
@@ -111,7 +109,6 @@ h2 {
     color: $color-letra;
 }
 
-
 .novedades> {
     div {
         display: flex;
@@ -119,6 +116,7 @@ h2 {
         align-items: center;
         margin-left: 10px;
         flex-wrap: wrap;
+        margin-bottom: 5px;
 
         article {
             @include sizes(300px, 350px);
@@ -145,6 +143,7 @@ h2 {
         }
     }
 }
+
 
 /*Contacto*/
 @mixin imagen ($porcentaje, $calc) {
@@ -173,7 +172,7 @@ h2 {
 
 .imagen {
     @include imagen(100%, $calc: calc(60vh - 110px));
-    color: black;
+    color: $color-negro;
     display: flex;
     flex-direction: column;
     justify-content: space-around;
@@ -231,13 +230,15 @@ $color: (
     estilo1: #bcd379,
     estilo2: #c2242d,
 );
- /*EACH con mapas*/
- @each $nombre, $valor in $color {
-    .boton-#{$nombre}{
+
+/*EACH con mapas*/
+@each $nombre,
+$valor in $color {
+    .boton-#{$nombre} {
         background-color: $valor;
         @extend .boton;
         text-decoration: underline;
         border-radius: 7px;
     }
-    
- }
+
+}

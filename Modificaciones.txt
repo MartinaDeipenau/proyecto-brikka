@@ -1,7 +1,0 @@
-Agregue mixin para width y height.
-Agregue extends para optimizar código.
-Agregue un map para darle color a botones de la sección contactos.
-Agregue keywords.
-Agregue descripción del sitio en las paginas.
-Reduje el peso de cada una de las imágene.
-Borre códigos innecesarios.

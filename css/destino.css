@@ -130,6 +130,7 @@ h2 {
   align-items: center;
   margin-left: 10px;
   flex-wrap: wrap;
+  margin-bottom: 5px;
 }
 .novedades > div article {
   width: 300px;
