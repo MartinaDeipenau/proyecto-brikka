@@ -166,6 +166,7 @@ h2 {
   padding: 10px;
   border-radius: 15px;
   margin-top: 7px;
+  box-shadow: 10px 10px 30px -6px #ddbea9;
 }
 
 .imagen {
@@ -246,7 +247,7 @@ h2 {
 .footer img {
   width: 70px;
   height: 70px;
-  border-radius: 10px;
+  border-radius: 5px;
   flex-wrap: wrap;
 }
 .footer div a img {
@@ -299,9 +300,6 @@ h2 {
   .hero h1 {
     font-size: 45px;
   }
-  .titulo h1 {
-    font-size: 30px;
-  }
   h1 {
     font-size: 30px;
   }
@@ -309,6 +307,9 @@ h2 {
     font-size: 20px;
   }
   .productos h2 {
+    font-size: 30px;
+  }
+  .comentario {
     font-size: 30px;
   }
   .footer div nav ul li a {
@@ -337,6 +338,9 @@ h2 {
   .productos h2 {
     text-align: center;
     font-size: 25px;
+  }
+  .comentario {
+    font-size: 20px;
   }
   .footer div nav ul li a {
     font-size: 15px;

@@ -1,12 +1,14 @@
 @import "../base/variables";
 @import "../base/generales";
 
-/*-----HEADER-----*/ 
+/*-----HEADER-----*/
 .header {
     box-shadow: 5px 5px 20px -6px;
     margin-bottom: 20px;
-    grid-area: header; 
+    grid-area: header;
 }
+
+
 
 .bg-blanco {
     background-color: white;
