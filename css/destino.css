@@ -65,7 +65,7 @@ h2 {
 
 .hero {
   width: 100%;
-  height: calc(100vh - 150px);
+  height: calc(100vh - 140px);
   color: black;
   display: flex;
   flex-direction: column;
@@ -172,7 +172,7 @@ h2 {
 
 .imagen {
   width: 100%;
-  height: calc(60vh - 110px);
+  height: calc(60vh - 100px);
   color: black;
   display: flex;
   flex-direction: column;
@@ -297,7 +297,7 @@ h2 {
   }
 }
 /*Tablet*/
-@media (min-width: 491px) and (max-width: 1019px) {
+@media (min-width: 321px) and (max-width: 1019px) {
   .hero h1 {
     font-size: 45px;
   }
@@ -329,10 +329,10 @@ h2 {
   }
 }
 /*Smartphone*/
-@media (max-width: 490px) {
+@media (max-width: 320px) {
   .header nav a img {
-    width: 150px;
-    height: 120px;
+    width: 140px;
+    height: 110px;
   }
   .hero h1 {
     font-size: 35px;
