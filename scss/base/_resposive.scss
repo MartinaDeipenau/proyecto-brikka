@@ -86,6 +86,9 @@
         h1 {
             font-size: 35px;
         }
+        img {
+            @include imagen(100%, calc(100vh - 170px));
+        }
     }
 
     h1 {
@@ -101,6 +104,11 @@
 
     .comentario {
         font-size: 20px;
+    }
+    .imagen {
+        img {
+            @include imagen(100%, $calc: calc(60vh - 130px));
+        }
     }
 
 

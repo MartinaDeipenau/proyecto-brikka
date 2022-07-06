@@ -31,7 +31,7 @@ h2 {
 }
 
 .hero {
-    @include imagen(100%, calc(100vh - 170px));
+    @include imagen(100%, calc(100vh - 150px));
     color: $color-negro;
     display: flex;
     flex-direction: column;
@@ -171,7 +171,7 @@ h2 {
 }
 
 .imagen {
-    @include imagen(100%, $calc: calc(60vh - 130px));
+    @include imagen(100%, $calc: calc(60vh - 110px));
     color: $color-negro;
     display: flex;
     flex-direction: column;
